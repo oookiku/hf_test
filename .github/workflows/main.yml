@@ -16,6 +16,4 @@ jobs:
           fetch-depth: 0
           lfs: true
       - name: Push to hub
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https:/oookiku:$HF_TOKEN@huggingface.co/spaces/oookiku/test main
+        run: git push https:/oookiku:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/oookiku/test main
